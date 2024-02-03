@@ -33,6 +33,7 @@ fieldset {
     padding: 2%;
     margin: 50px 2%;
     background-color: #93B9E1;
+    max-width: 90%;
 }
 
 legend {
@@ -51,17 +52,20 @@ label {
 
 input {
     margin-right: 5%;
-    width: 95%;
+    width: 81vw;
     height: 30px;
-    margin: 10px 20px;
+    margin: 10px 10px;
     font-size: 23px;
     border-radius: 0;
 }
 
 textarea {
-    margin: 20px;
-    max-width: 80%;
-    align-self: center;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    min-height: 30px;
+    width: 81vw;
+    max-width: 81vw;
 }
 
 #logo {
@@ -77,6 +81,4 @@ textarea {
     transition: 1s;
 }
 
-#submit {
-    border-radius: 4px;
-}
+#submit {}
