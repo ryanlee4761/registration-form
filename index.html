@@ -33,7 +33,6 @@
                 <label for="lname">Last name: </label>
                 <input type="text" id="lname" name="lname" required>
                 <br>
-                <!-- datalist? -->
                 <label for="gender">Gender:</label>
                 <input list="gender-list" id="gender" name="gender" />
 
@@ -44,6 +43,7 @@
                     <option value="Other"></option>
                     <option value="Decline to state"></option>
                 </datalist>
+                <!-- needs validation -->
                 <label for="country">Country of Residence: </label>
                 <input type="text" id="country" name="country" required>
             </fieldset>
@@ -70,12 +70,16 @@
                 <p><small>1000 character maximum</small></p>
             </fieldset>
 
-            <fieldset>
-                <label for="over18">By checking this box, I am verifying that I am 18 years of age or older.</label>
-                <input type="checkbox" id="over18" name="over18" required>
-
-                <button type="submit" id="submit" name="submit">Submit</button>
-            </fieldset>
+            <div id="submitfield">
+                <div class="split">
+                    <label for="over18">By checking this box, I am verifying that I am 18 years of age or older.</label>
+                    <input type="checkbox" id="over18" name="over18"
+                        onchange="document.getElementById('submit').disabled = !this.checked;" required>
+                </div>
+                <div class="center">
+                    <button type="submit" id="submit" name="submit" disabled="disabled">Submit</button>
+                </div>
+            </div>
         </form>
     </main>
     <footer>
