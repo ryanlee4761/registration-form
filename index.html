@@ -7,56 +7,77 @@
     <meta name="description" content="stuff">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Cal Hacks 11.0 Registration</h1>
-    <form id="form">
-        <!-- Name + Gender -->
-        <fieldset>
-            <legend>Personal Information</legend>
+    <header>
+        <a href="https://calhacks.io" id="logo">
+            <h2>Cal Hacks 11.0</h2>
+        </a>
+    </header>
 
-            <label for="fname">First name: </label>
-            <input type="text" id="fname" name="fname" required>
-            <label for="mname">Middle name: </label>
-            <input type="text" id="mname" name="mname">
-            <label for="lname">Last name: </label>
-            <input type="text" id="lname" name="lname" required>
-            <br>
-            <!-- datalist? -->
-            <label for="gender">Gender: </label>
-            <input type="text" id="gender" name="gender" required>
-            <label for="country">Country of Residence: </label>
-            <input type="text" id="country" name="country" required>
-        </fieldset>
+    <main>
+        <h1>Registration</h1>
+        <form id="form">
+            <!-- Name + Personal Info -->
+            <fieldset>
+                <legend>Personal Information</legend>
 
-
-        <!-- University, Major, Graduation Date -->
-        <fieldset>
-            <legend>College Information</legend>
-            <label for="uni">University: </label>
-            <input type="text" id="uni" name="uni" required>
-            <label for="major">Major: </label>
-            <input type="text" id="major" name="major" required>
-            <!-- validate, date is not after 2028 -->
-            <label for="grad">Graduation Date: </label>
-            <input type="month" id="grad" name="grad" min="2024-01" max="2029-12" required>
-        </fieldset>
-
-        <fieldset>
-            <legend>Short Response</legend>
-            <!-- validate, character counts does not exceed 1000 -->
-            <label for="essay">Why are you interested in attending Cal Hacks 11.0? What are you interested in
-                building? (1000 character maximum)</label><br>
-            <textarea id="essay" name="essay" maxlength="1000">Type in your response here</textarea>
-        </fieldset>
-
-        <label for="over18">By checking this box, I am verifying that I am 18 years of age or older.</label>
-        <input type="checkbox" id="over18" name="over18" required>
+                <label for="fname">First name: </label>
+                <input type="text" id="fname" name="fname" required>
+                <label for="mname">Middle name: </label>
+                <input type="text" id="mname" name="mname" placeholder="(Optional)">
+                <label for="lname">Last name: </label>
+                <input type="text" id="lname" name="lname" required>
+                <br>
+                <!-- datalist? -->
+                <label for="gender">Gender: </label>
+                <input type="list" id="gender" name="gender" required>
+                <datalist>
+                    <option value="Female"></option>
+                    <option value="Male"></option>
+                    <option value="Nonbinary"></option>
+                    <option value="Other (please input)"></option>
+                </datalist>
+                <label for="country">Country of Residence: </label>
+                <input type="text" id="country" name="country" required>
+            </fieldset>
 
 
-        <button type="submit" id="submit" name="submit">Submit</button>
-    </form>
+            <!-- University, Major, Graduation Date -->
+            <fieldset>
+                <legend>College Information</legend>
+                <label for="uni">University: </label>
+                <input type="text" id="uni" name="uni" required>
+                <label for="major">Major: </label>
+                <input type="text" id="major" name="major" required>
+                <label for="grad">Graduation Date: </label>
+                <input type="month" id="grad" name="grad" min="2024-01" max="2029-12" pattern="[0-9]{4}-[0-9]{2}"
+                    required>
+            </fieldset>
+
+            <!-- Short Response Section -->
+            <fieldset>
+                <legend>Short Response</legend>
+                <label for="essay">Why are you interested in attending Cal Hacks 11.0? What are you interested in
+                    building? (1000 character maximum)</label><br>
+                <textarea id="essay" name="essay" maxlength="1000" placeholder="Type in your response here" rows="5"
+                    cols="100"></textarea>
+            </fieldset>
+
+            <label for="over18">By checking this box, I am verifying that I am 18 years of age or older.</label>
+            <input type="checkbox" id="over18" name="over18" required>
+
+
+            <button type="submit" id="submit" name="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <h3>Made with HTML, &lt;3, CSS, Next.Js, stress, Tailwind.css, Google Fonts, and VSCode </h2>
+    </footer>
 </body>
 
 </html>
