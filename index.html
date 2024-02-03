@@ -47,6 +47,20 @@
                 <!-- needs validation -->
                 <label for="country">Country of Residence: </label>
                 <input type="text" id="country" name="country" required>
+                <label for="resume">Upload Resume</label>
+                <input type="file" id="resume" name="resume" accept=".pdf" onchange="showPreview(event);" required>
+                <embed id="preview"></div>
+                <script>
+                    function showPreview(event) {
+                        if (event.target.files.length > 0) {
+                            var src = URL.createObjectURL(event.target.files[0]);
+                            var preview = document.getElementById("preview");
+                            preview.setAttribute("src", src);
+                            preview.setAttribute("width", 400);
+                            preview.setAttribute("height", 600);
+                        }
+                    }
+                </script>
             </fieldset>
 
 
@@ -85,7 +99,8 @@
     </main>
 
     <footer>
-        <h6>Made with HTML, &lt;3, CSS, Next.Js, Tailwind.css, stress, Github, Google Fonts, and VSCode </h6>
+        <h6>Made with HTML, &lt;3, CSS, stress, Github, Google Fonts, and VSCode (nextjs and tailwind were mean to me)
+        </h6>
     </footer>
 </body>
 
