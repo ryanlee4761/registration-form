@@ -34,13 +34,15 @@
                 <input type="text" id="lname" name="lname" required>
                 <br>
                 <!-- datalist? -->
-                <label for="gender">Gender: </label>
-                <input type="list" id="gender" name="gender" required>
-                <datalist>
+                <label for="gender">Gender:</label>
+                <input list="gender-list" id="gender" name="gender" />
+
+                <datalist id="gender-list">
                     <option value="Female"></option>
                     <option value="Male"></option>
                     <option value="Nonbinary"></option>
-                    <option value="Other (please input)"></option>
+                    <option value="Other"></option>
+                    <option value="Decline to state"></option>
                 </datalist>
                 <label for="country">Country of Residence: </label>
                 <input type="text" id="country" name="country" required>
@@ -63,20 +65,21 @@
             <fieldset>
                 <legend>Short Response</legend>
                 <label for="essay">Why are you interested in attending Cal Hacks 11.0? What are you interested in
-                    building? (1000 character maximum)</label><br>
-                <textarea id="essay" name="essay" maxlength="1000" placeholder="Type in your response here" rows="5"
-                    cols="100"></textarea>
+                    building?</label><br>
+                <textarea id="essay" name="essay" maxlength="1000" placeholder="Type in your response here"></textarea>
+                <p><small>1000 character maximum</small></p>
             </fieldset>
 
-            <label for="over18">By checking this box, I am verifying that I am 18 years of age or older.</label>
-            <input type="checkbox" id="over18" name="over18" required>
+            <fieldset>
+                <label for="over18">By checking this box, I am verifying that I am 18 years of age or older.</label>
+                <input type="checkbox" id="over18" name="over18" required>
 
-
-            <button type="submit" id="submit" name="submit">Submit</button>
+                <button type="submit" id="submit" name="submit">Submit</button>
+            </fieldset>
         </form>
     </main>
     <footer>
-        <h3>Made with HTML, &lt;3, CSS, Next.Js, stress, Tailwind.css, Google Fonts, and VSCode </h2>
+        <h6>Made with HTML, &lt;3, CSS, Next.Js, stress, Tailwind.css, Google Fonts, and VSCode </h6>
     </footer>
 </body>
 
