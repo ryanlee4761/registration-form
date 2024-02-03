@@ -1,7 +1,7 @@
 html {
     font-family: 'Inter', sans-serif;
     background: rgb(163, 202, 255);
-    background: linear-gradient(90deg, rgba(163, 202, 255, 1) 0%, rgba(167, 199, 231, 1) 34%, rgba(117, 191, 236, 1) 64%, rgba(167, 199, 231, 1) 100%);
+    background: linear-gradient(90deg, #a3caff 0%, #a7c7e7 34%, #75bfec 64%, #a7c7e7 100%);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
@@ -31,7 +31,9 @@ h1 {
 
 fieldset {
     padding: 2%;
-    margin: 50px 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 50px;
     background-color: #93B9E1;
     max-width: 90%;
 }
@@ -68,6 +70,17 @@ textarea {
     max-width: 81vw;
 }
 
+.split {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #logo {
     color: black;
     font-style: normal;
@@ -81,4 +94,27 @@ textarea {
     transition: 1s;
 }
 
-#submit {}
+#submitfield {
+    text-align: center;
+    padding: 3%;
+}
+
+#over18 {
+    width: 40px;
+}
+
+#submit {
+    width: 100px;
+    height: 55px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: black;
+    transition: 2s;
+}
+
+#submit:hover:enabled {
+    color: darkblue;
+    font-size: 25px;
+    background: rgb(69, 125, 205);
+    transition: 1.5s;
+}
