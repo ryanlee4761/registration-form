@@ -1,0 +1,22 @@
+html {
+    background: rgb(163, 202, 255);
+    background: linear-gradient(90deg, rgba(163, 202, 255, 1) 0%, rgba(117, 191, 236, 1) 59%, rgba(167, 199, 231, 1) 100%);
+}
+
+h1 {
+    text-align: center;
+}
+
+fieldset {
+    padding: 2%;
+    margin: 50px 2%;
+    text-align: center;
+}
+
+#form {
+    border-style: double;
+}
+
+#submit {
+    border-radius: 4px;
+}
